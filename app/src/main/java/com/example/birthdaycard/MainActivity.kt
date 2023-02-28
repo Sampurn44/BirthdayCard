@@ -50,10 +50,10 @@ fun BirthdayGreetingWithImage(message: String,from: String){
 fun BirthdayGreetingWithText(message: String,from: String){
     Column {
         Text(text = message, fontSize = 36.sp
-        , modifier = Modifier.fillMaxWidth().wrapContentWidth(align = Alignment.Start)
+        , modifier = Modifier.fillMaxWidth().wrapContentWidth(align = Alignment.CenterHorizontally)
                 .padding(start = 16.dp, top = 24.dp))
         Text(text = from, fontSize = 24.sp
-            , modifier = Modifier.fillMaxWidth().wrapContentWidth(align = Alignment.End)
+            , modifier = Modifier.fillMaxWidth().wrapContentWidth(align = Alignment.CenterHorizontally)
                 .padding(start = 16.dp, top = 5.dp))
     }
 
