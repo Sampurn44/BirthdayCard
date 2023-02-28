@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.example.birthdaycard'
-    compileSdk 33
+    compileSdkPreview compose_ui_version
 
     defaultConfig {
         applicationId "com.example.birthdaycard"
