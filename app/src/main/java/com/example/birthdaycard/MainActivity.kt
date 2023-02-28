@@ -29,21 +29,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ){
-                    BirthdayGreetingWithImage(message = "Happy Birthday Dev!", from = "-from Riddhima")
+                    BirthdayGreetingWithText(message = "Happy Birthday Dev!", from = "from Riddhima")
                 }
 
             }
         }
-    }
-}
-@Composable
-fun BirthdayGreetingWithImage(message: String,from: String){
-    val image = painterResource(id = R.drawable.androidparty)
-    Box{
-        Image(painter = image, contentDescription =null ,
-            modifier = Modifier.fillMaxHeight().fillMaxWidth(),
-            contentScale = ContentScale.Crop)
-        BirthdayGreetingWithText(message = message, from = from )
     }
 }
 @Composable
@@ -60,9 +50,8 @@ fun BirthdayGreetingWithText(message: String,from: String){
 }
 @Preview(showBackground = true)
 @Composable
-fun BirthdayGreetingWithImagePreview() {
+fun BirthdayGreetingWithTextPreview() {
     BirthdayCardTheme {
-        BirthdayGreetingWithImage(message = stringResource(R.string.birthday_message),
-            from = stringResource(R.string.from_message))
+        BirthdayGreetingWithText(message = "Happy Birthday Dev!", from = "from Riddhima")
     }
 }
